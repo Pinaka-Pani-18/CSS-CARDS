@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: black;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.card-container {
+  background-color: white;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  transform-style: preserve-3d;
+}
+
+.content {
+  text-align: center;
+  transform-style: preserve-3d;
+}
+
+.content i {
+  margin: 10px 0;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  background-color: black;
+  color: white;
+  font-size: 45px;
+  border-radius: 50%;
+  transform: translateZ(50px);
+}
+
+.content h1 {
+  font-size: 24px;
+  transform: translateZ(50px);
+}
+
+.content p {
+  margin: 10px 0 0 0;
+  transform: translateZ(50px);
+}
+
+.icons {
+  margin: 10px;
+  transform: translateZ(50px);
+}
+
+.icons a i {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  background-color: black;
+  color: white;
+  font-size: small;
+  text-align: center;
+  line-height: 28px;
+  border-radius: 50%;
+  border: 1px solid black;
+  transition: all 0.3s ease-in-out;
+}
+
+.icons a i:hover {
+  border: 1px solid black;
+  background: transparent;
+  color: black;
+}
