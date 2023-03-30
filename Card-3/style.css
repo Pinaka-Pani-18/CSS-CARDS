@@ -6,3 +6,87 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  max-width: 1200px;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.card_container {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.card_wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column-reverse;
+  margin: 2rem 1rem;
+  max-width: 320px;
+  align-items: center;
+  border: 3px solid #ccc;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 3px 3px 10px #ccc, -3px 3px 10px #ccc;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease-in-out;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+.card-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: justify;
+}
+
+.card .card-content h2 {
+  font-size: 2rem;
+  margin-bottom: -1.2rem;
+}
+
+.card-content p {
+  font-size: 1.3rem;
+}
+
+.status {
+  display: flex;
+  justify-content: space-between;
+}
+
+.read-btn {
+  all: unset;
+  font-weight: 700;
+  font-size: 1.3rem;
+  border-bottom: 3px solid transparent;
+}
+
+.read-btn:hover {
+  border-bottom: 3px solid #ccc;
+}
