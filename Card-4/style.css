@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  position: relative;
+  width: 300px;
+  height: 420px;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.front-part {
+  height: 100%;
+  width: 100%;
+  background: url(man1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+}
+
+.back-part {
+  background-color: aqua;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.front-part,
+.back-part {
+  position: absolute;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transition: 1s;
+  transform-style: preserve-3d;
+}
+
+.contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  color: white;
+  transform-style: preserve-3d;
+}
+
+.contents p {
+  font-size: 30px;
+  font-weight: 600;
+  color: black;
+  transform: translateZ(50px);
+}
+
+.contents p:after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 60%;
+  background-color: black;
+  margin: 0 auto;
+  margin-top: 5px;
+  transform: translateZ(50px);
+}
+
+.contents span {
+  margin-top: 10px;
+  color: black;
+  transform: translateZ(50px);
+}
+
+.front {
+  margin-top: -100px;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 20px;
+  margin-top: 5px;
+  transform: translateZ(50px);
+}
+
+.icons .fab {
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 50%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  transition: all 0.5s ease-in-out;
+  transform: translateZ(50px);
+}
+
+.icons .fab:hover {
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+}
+
+.container .back-part {
+  transform: rotateY(180deg);
+}
+
+.container:hover .back-part {
+  transform: rotateY(0);
+}
+
+.container:hover .front-part {
+  transform: rotateY(-180deg);
+}
